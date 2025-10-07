@@ -9,30 +9,40 @@ const images = ref<PexelsPhoto[]>([])
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 const searchTerm = ref('nature')
+const page = ref(1)
 let debounceTimer: number
 
 watch(searchTerm, (newTerm) => {
   clearTimeout(debounceTimer)
 
   debounceTimer = setTimeout(() => {
+    clearTimeout(debounceTimer)
+
     if (newTerm.length >= 2) {
-      fetchImages(newTerm)
+      fetchImages(newTerm, true)
     }
     if (newTerm.length === 0) {
       images.value = []
     }
   }, 300)
 })
-const fetchImages = async (query: string) => {
+const fetchImages = async (query: string, isNewSearch = false) => {
+  if (isNewSearch) {
+    page.value = 1
+    images.value = []
+  }
   isLoading.value = true
   error.value = null
 
   try {
-    const response = await fetch(`https://api.pexels.com/v1/search?query=${query}&per_page=15`, {
-      headers: {
-        Authorization: apiKey,
+    const response = await fetch(
+      `https://api.pexels.com/v1/search?query=${query}&per_page=15&page=${page.value}`,
+      {
+        headers: {
+          Authorization: apiKey,
+        },
       },
-    })
+    )
 
     if (!response.ok) {
       throw new Error('Falha ao buscar imagens')
@@ -47,8 +57,12 @@ const fetchImages = async (query: string) => {
     isLoading.value = false
   }
 }
-onMounted(() => {
+const loadMore = () => {
+  page.value++
   fetchImages(searchTerm.value)
+}
+onMounted(() => {
+  fetchImages(searchTerm.value, true)
 })
 </script>
 <template>
@@ -62,5 +76,6 @@ onMounted(() => {
       <p class="text-xl text-red-500">{{ error }}</p>
     </div>
     <GalleryGrid v-else-if="images.length > 0" :images="images" />
+    <div ref="sentinel" class="h-10"></div>
   </main>
 </template>
