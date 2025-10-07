@@ -1,0 +1,24 @@
+{
+  "photos": [
+    {
+      "id": 1,
+      "photographer": "Mock Photo 1",
+      "src": { "medium": "https://placehold.co/600x400/ef4444/ffffff" }
+    },
+    {
+      "id": 2,
+      "photographer": "Mock Photo 2",
+      "src": { "medium": "https://placehold.co/600x400/22c55e/ffffff" }
+    },
+    {
+      "id": 3,
+      "photographer": "Mock Photo 3",
+      "src": { "medium": "https://placehold.co/600x400/3b82f6/ffffff" }
+    },
+    {
+      "id": 4,
+      "photographer": "Mock Photo 4",
+      "src": { "medium": "https://placehold.co/600x400/eab308/ffffff" }
+    }
+  ]
+}
