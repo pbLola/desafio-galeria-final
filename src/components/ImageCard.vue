@@ -1,10 +1,12 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { PexelsPhoto } from '@/types'
+defineProps<{
+  image: PexelsPhoto
+}>()
+</script>
 <template>
-  <div class="bg-white rounded-lg shadow-md overflow-hidden">
-    <img
-      src="https://placehold.co/600x400"
-      alt="Imagem de placeholder"
-      class="w-ful h-48 object-cover"
-    />
+  <div class="bg-white rounded-lg shadow-md overflow-hidden group">
+    <img :src="image.src.medium" :alt="image.photographer" class="w-ful h-48 object-cover" />
+    <p class="p-2 text-sm text-gray-600 truncate">{{ image.photographer }}</p>
   </div>
 </template>
