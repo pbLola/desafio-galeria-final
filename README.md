@@ -1,48 +1,61 @@
-# .
+# Galeria de Imagens com Vue 3 e Pexels API
 
-This template should help get you started developing with Vue 3 in Vite.
+# Projeto desenvolvido para o Desafio de Frontend Júnior. Galeria de imagens responsiva que utiliza a API da Pexels, com funcionalidades de busca com debounce e scroll infinito.
 
-## Recommended IDE Setup
+## 📸 Capturas de Tela
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[Insira aqui a primeira captura de tela]
 
-## Recommended Browser Setup
+[Insira aqui a segunda captura de tela]
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd) 
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+## Decisões Técnicas
 
-## Type Support for `.vue` Imports in TS
+Para a funcionalidade de **scroll infinito** foi escolhido usar a **`Intersection Observer API`**
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Como Rodar o Projeto
 
-## Customize configuration
+Siga os passos abaixo para executar o projeto na sua máquina.
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+**Pré-requisitos:**
 
-## Project Setup
+- Node.js (v16 ou superior)
+- npm ou Yarn
 
-```sh
-npm install
-```
+**Passos:**
 
-### Compile and Hot-Reload for Development
+1.  **Clone o repositório:**
 
-```sh
-npm run dev
-```
+    ```bash
+    git clone [COLE A URL DO SEU REPOSITÓRIO AQUI]
+    ```
 
-### Type-Check, Compile and Minify for Production
+2.  **Navegue até a pasta do projeto:**
 
-```sh
-npm run build
-```
+    ```bash
+    cd [NOME_DA_PASTA_DO_PROJETO]
+    ```
 
-### Lint with [ESLint](https://eslint.org/)
+3.  **Instale as dependências:**
 
-```sh
-npm run lint
-```
+    ```bash
+    npm install
+    ```
+
+4.  **Configure sua chave da API:**
+
+          * Crie um arquivo chamado `.env` na raiz do projeto.
+          * Dentro dele, adicione sua chave da API da Pexels da seguinte forma:
+
+    VITE_PEXELS_API_KEY=dihzk12BJ9rt5b29iyHXrX3ujcoeAlTIDPEq3mGPsZSCYMtUowqkVdcf
+
+    ```
+
+    ```
+
+5.  **Execute o projeto:**
+
+    ```bash
+    npm run dev
+    ```
+
+A aplicação estará disponível no endereço que aparecer no seu terminal (geralmente `http://localhost:5173`).
