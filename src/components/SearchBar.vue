@@ -1,3 +1,6 @@
+<script setup lang="ts">
+const model = defineModel<string>()
+</script>
 <template>
   <div class="p-4 mb-4">
     <div class="flex max-w-2xl mx-auto">
