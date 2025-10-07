@@ -1,6 +1,6 @@
-# Galeria de Imagens com Vue 3 e Pexels API
+📷 Desafio Vue — Galeria de Imagens com Scroll Infinito
 
-# Projeto desenvolvido para o Desafio de Frontend Júnior. Galeria de imagens responsiva que utiliza a API da Pexels, com funcionalidades de busca com debounce e scroll infinito.
+Galeria de imagens responsiva que utiliza a API da Pexels, com funcionalidades de busca com debounce e scroll infinito.
 
 ## 📸 Capturas de Tela
 
