@@ -74,8 +74,17 @@ onMounted(() => {
     </div>
     <div v-else-if="error" class="text-center mt-10">
       <p class="text-xl text-red-500">{{ error }}</p>
+      <button
+        @click="fetchImages(searchTerm, true)"
+        class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+      >
+        Tentar Novamente
+      </button>
     </div>
-    <GalleryGrid v-else-if="images.length > 0" :images="images" />
+    <div v-else="images.length === 0" class="text-center mt-10">
+      <p class="text-xl text-gray-500">Nenhum resultado encontrado para "{{ searchTerm }}"</p>
+    </div>
+    <GalleryGrid v-else :images="images" />
     <div ref="sentinel" class="h-10"></div>
   </main>
 </template>
