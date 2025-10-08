@@ -1,12 +1,12 @@
-📷 Desafio Vue — Galeria de Imagens com Scroll Infinito
+## Desafio Vue — Galeria de Imagens com Scroll Infinito
 
 Galeria de imagens responsiva que utiliza a API da Pexels, com funcionalidades de busca com debounce e scroll infinito.
 
 ## 📸 Capturas de Tela
 
-[Insira aqui a primeira captura de tela]
+![Tela Principal da Galeria](./screenshots/captura1.png)
 
-[Insira aqui a segunda captura de tela]
+![Tela de Erro](./screenshots/captura2.png)
 
 ## Decisões Técnicas
 
@@ -26,13 +26,13 @@ Siga os passos abaixo para executar o projeto na sua máquina.
 1.  **Clone o repositório:**
 
     ```bash
-    git clone [COLE A URL DO SEU REPOSITÓRIO AQUI]
+    git clone [https://github.com/pbLola/desafio-galeria-final]
     ```
 
 2.  **Navegue até a pasta do projeto:**
 
     ```bash
-    cd [NOME_DA_PASTA_DO_PROJETO]
+    cd [desafio-galeria-final]
     ```
 
 3.  **Instale as dependências:**

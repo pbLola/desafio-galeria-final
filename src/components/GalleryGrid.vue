@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4">
+  <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-1.5 px-4">
     <ImageCard v-for="image in images" :key="image.id" :image="image" />
   </div>
 </template>
